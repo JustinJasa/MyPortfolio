@@ -1,0 +1,46 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0 2rem;
+}
+
+.options{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{ 
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: var(--secondary-text);
+}
+
+.item > span{
+    color: #16dbff;
+    margin-right: 5px;
+    font-size: 14px;
+    font-family: var(--secondary-text);
+
+}
+
+.item:hover{
+    color: #16dbff;
+    cursor: pointer;
+}
+
+.moon{ 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: 0.3s ease-in;
+}
+
+.moon:hover{
+    background-color: #16dbff;
+    transition: 0.3s ease-out;
+    border-radius: 1rem;
+}
