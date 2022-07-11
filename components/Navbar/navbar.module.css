@@ -32,7 +32,15 @@
 }
 
 .moon{ 
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    padding: 0.25rem;
+    transition: 0.3s ease-in;
+}
+
+.moon:hover{
+    background-color: #16dbff;
+    transition: 0.3s ease-out;
+    border-radius: 1rem;
 }
