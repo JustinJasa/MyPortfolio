@@ -6,10 +6,10 @@ import css from './socials.module.css'
 function Socials() {
   return (
     <div className={css.container}>
-        <SocialIcon network="instagram" style={{ height: 30, width: 30 }} className={css.icon}/>
-        <SocialIcon network="github" style={{ height: 30, width: 30 }} className={css.icon} bgColor="#FFFFFF"/>
-        <SocialIcon network="twitter" style={{ height: 30, width: 30 }} className={css.icon}/>
-        <SocialIcon network="linkedin" style={{ height: 30, width: 30 }} className={css.icon}/>
+        <SocialIcon network="instagram" style={{ height: 30, width: 30 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
+        <SocialIcon network="github" style={{ height: 30, width: 30 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon} bgColor="#FFFFFF"/>
+        <SocialIcon network="twitter" style={{ height: 30, width: 30 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
+        <SocialIcon network="linkedin" style={{ height: 30, width: 30 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
     </div>
   )
 }
