@@ -6,7 +6,6 @@
 }
 
 .icon:hover{
-    background-color: #16dbff;
     transform: translateY(-10px);
     cursor: pointer;
 }

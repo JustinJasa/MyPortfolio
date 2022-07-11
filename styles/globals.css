@@ -1,31 +1,62 @@
 html,
 body {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-* {
-	box-sizing: border-box;
-	background-color: #272727;
-	color: #DEE4E7;
-	font-family: var(--primary-text);
+body #dark {
+  box-sizing: border-box;
+  font-family: var(--primary-text);
+  background-color: var(--dark-theme);
+  color: var(--light-theme);
+  transition: 0.5s ease-in-out;
 }
 
-:root{
-	--primary-text: colfax-web, sans-serif;
-	--secondary-text: input-mono, monospace;
+body #light {
+  box-sizing: border-box;
+  font-family: var(--primary-text);
+  background-color: var(--light-theme);
+  color: var(--dark-theme);
+  transition: 0.5s ease-in-out;
 }
 
-li{ 
-	list-style: none;
+:root {
+  --primary-text: colfax-web, sans-serif;
+  --secondary-text: input-mono, monospace;
+  --light-theme: #dee4e7;
+  --dark-theme: #272727;
+  --dark-neon: #00c6a9;
+  --light-neon: #b56200;
+  --alternative-neon: #16dbff;
 }
 
-h1,h2,h3,h4,h5{
-	margin: 0;
+li {
+  list-style: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+span {
+  cursor: pointer;
+}
+
+/* #light span{ 
+	color: var(--light-neon);
+} */
+
+/* #dark span{ 
+	background-color: var(--dark-neon);
+} */

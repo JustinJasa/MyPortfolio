@@ -19,6 +19,7 @@ import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
 import css from "./navbar.module.css";
 import Link from "next/link";
 import { Switch } from "antd";
+import { useGlobalContext } from "../../contexts/context";
 
 const solutions = [
   {
@@ -98,9 +99,12 @@ const recentPosts = [
 ];
 
 export default function Navbar() {
+  const { toggleTheme, theme } = useGlobalContext();
+
   return (
-    <div className={css.navbar}>
-      <img src={MenuIcon} alt="logo" />
+    <div className={css.navbar} id={theme}>
+      <h2>JJ.</h2>
+      {/* <img src={MenuIcon} alt="logo" /> */}
       <li className={css.options}>
         <ul className={css.item}>
           <span>1.</span>Projects
@@ -112,8 +116,9 @@ export default function Navbar() {
           <span>3.</span>Resume
         </ul>
       </li>
-	  <MoonIcon className={css.moon}/>
-      
+      { theme == "dark" ?
+        <MoonIcon className={css.icon} onClick={toggleTheme} /> : <SunIcon className={css.icon} onClick={toggleTheme} />
+      }
     </div>
   );
 }
