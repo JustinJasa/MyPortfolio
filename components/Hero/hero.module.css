@@ -1,0 +1,59 @@
+.button{  
+    letter-spacing: 2px;
+    padding: 1.5rem 0rem;
+    margin: 1.5rem 0rem;
+}
+
+
+
+.button > span {
+    font-family: var(--secondary-text);
+    border: #16dbff 1px solid; 
+    padding: 1rem;
+    color: #16dbff;
+}
+
+
+
+.button > span:hover{
+    background-color: #16dbff;
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+}
+
+.container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.intro {
+    font-family: var(--secondary-text);
+    font-weight: lighter;
+    color: #16dbff;
+}
+
+.tag{ 
+    color: #16dbff;
+    font-size: 68px;
+    padding: 1rem 0rem;
+}
+
+.justin{
+    font-size: 68px;
+    color: #ccd6f6;
+    padding: 1rem 0rem;
+}
+
+.desc{
+    width: 60%;
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+

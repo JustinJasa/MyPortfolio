@@ -12,4 +12,20 @@ a {
 
 * {
 	box-sizing: border-box;
+	background-color: #272727;
+	color: #DEE4E7;
+	font-family: var(--primary-text);
+}
+
+:root{
+	--primary-text: colfax-web, sans-serif;
+	--secondary-text: input-mono, monospace;
+}
+
+li{ 
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5{
+	margin: 0;
 }

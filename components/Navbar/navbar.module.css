@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0 2rem;
+}
+
+.options{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{ 
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: var(--secondary-text);
+}
+
+.item > span{
+    color: #16dbff;
+    margin-right: 5px;
+    font-size: 14px;
+    font-family: var(--secondary-text);
+
+}
+
+.item:hover{
+    color: #16dbff;
+    cursor: pointer;
+}
+
+.moon{ 
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
