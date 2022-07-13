@@ -1,49 +1,62 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 3rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
 }
 
-.options{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* will implement at a later time
+
+.navbarActive {
+  border-bottom: grey 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
 }
 
-.item{ 
-    font-size: 16px;
-    transition: 0.3s;
-    font-family: var(--secondary-text);
+*/
+
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.item > span{
-    margin-right: 5px;
-    font-size: 14px;
-    font-family: var(--secondary-text);
-    color: var(--dark-neon);
+.item {
+  font-size: 16px;
+  transition: 0.3s;
+  font-family: var(--secondary-text);
+}
+
+.item > span {
+  margin-right: 5px;
+  font-size: 14px;
+  font-family: var(--secondary-text);
+  color: var(--dark-neon);
 }
 
 .item:hover {
-    color: var(--dark-neon);
-    cursor: pointer;
+  color: var(--dark-neon);
+  cursor: pointer;
 }
 
 * #dark .item:hover {
-    color: var(--dark-neon);
-    cursor: pointer;
+  color: var(--dark-neon);
+  cursor: pointer;
 }
 
-.icon{ 
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    padding: 0.25rem;
-    transition: 0.3s ease-in;
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: 0.3s ease-in;
 }
 
-.icon:hover{
-    background-color: var(--dark-neon);
-    transition: 0.3s ease-out;
-    border-radius: 1rem;
+.icon:hover {
+  background-color: var(--dark-neon);
+  transition: 0.3s ease-out;
+  border-radius: 1rem;
 }

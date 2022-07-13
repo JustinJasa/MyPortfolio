@@ -7,6 +7,7 @@ import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Socials from "../components/SocialIcons/socials";
 import { useGlobalContext } from "../contexts/context";
+import About from "../components/AboutMe/aboutme";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
     <div className={styles.main} id={theme}>
       <Hero />
       <Socials />
+      <About/>
       <Skills />
       <Projects />
       <Contact />

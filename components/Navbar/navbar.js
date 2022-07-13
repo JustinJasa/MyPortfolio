@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -99,10 +99,28 @@ const recentPosts = [
 ];
 
 export default function Navbar() {
+
+  
+
   const { toggleTheme, theme } = useGlobalContext();
 
+  // will do later
+  // nav bar scrolling
+
+  /*
+
+  const [nav, setNav] = useState(false)
+
+  const showNav = () => { 
+    
+  }
+
+  */
+
+  // ${css.navbar}
+
   return (
-    <div className={css.navbar} id={theme}>
+    <div className={`${css.navbar}`} id={theme}>
       <h2>JJ.</h2>
       {/* <img src={MenuIcon} alt="logo" /> */}
       <li className={css.options}>
