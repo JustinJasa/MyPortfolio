@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -99,9 +99,6 @@ const recentPosts = [
 ];
 
 export default function Navbar() {
-
-  
-
   const { toggleTheme, theme } = useGlobalContext();
 
   // will do later
@@ -128,15 +125,18 @@ export default function Navbar() {
           <span>1.</span>Projects
         </ul>
         <ul className={css.item}>
-          <span>2.</span>My Learnings
+          <span>2.</span>
+          <Link href={"learnings"}> My Learnings </Link>
         </ul>
         <ul className={css.item}>
           <span>3.</span>Resume
         </ul>
       </li>
-      { theme == "dark" ?
-        <MoonIcon className={css.icon} onClick={toggleTheme} /> : <SunIcon className={css.icon} onClick={toggleTheme} />
-      }
+      {theme == "dark" ? (
+        <MoonIcon className={css.icon} onClick={toggleTheme} />
+      ) : (
+        <SunIcon className={css.icon} onClick={toggleTheme} />
+      )}
     </div>
   );
 }
