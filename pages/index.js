@@ -3,11 +3,11 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Hero from "../components/Hero/hero";
 import Skills from "../components/skill";
-import Projects from "../components/projects";
 import Contact from "../components/contact";
 import Socials from "../components/SocialIcons/socials";
 import { useGlobalContext } from "../contexts/context";
 import About from "../components/AboutMe/aboutme";
+import Projs from '../components/ProjectSection/projs'
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
       <Socials />
       <About/>
       <Skills />
-      <Projects />
+      <Projs />
       <Contact />
     </div>
   );

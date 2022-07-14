@@ -1,0 +1,175 @@
+.container {
+  width: 60%;
+  margin: auto;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerOne {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  opacity: 0.2;
+  margin-bottom: 0.8rem;
+}
+
+.about {
+  font-family: var(--primary-text);
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in;
+}
+
+.about:hover {
+  transition: 0.3s ease-in;
+  color: var(--dark-neon);
+}
+
+.one {
+  color: var(--dark-neon);
+  font-size: 24px;
+  margin-right: 10px;
+  font-family: var(--secondary-text);
+}
+
+.projectOne {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.featured {
+  color: var(--dark-neon);
+  font-size: 14px;
+  padding: 0.3rem;
+  font-family: var(--secondary-text);
+}
+
+.sneakerDon {
+  font-size: 30px;
+  padding: 0.5rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.description p {
+  text-align: right;
+  width: 80%;
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  line-height: 1.6;
+  background: var(--dark-theme);
+  border: 0.5px solid black;
+  color: var(--light-theme);
+  border-radius: 5px;
+}
+
+.technologies {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  font-family: var(--secondary-text);
+  color: var(--dark-neon);
+  font-size: 12px;
+}
+
+.technologies li {
+  margin: 0px 5px;
+}
+
+.sneakerImage {
+  margin-right: -140px;
+}
+
+.sneakerImage img {
+  width: 400px;
+  height: 400px;
+}
+
+.icon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: translateY(0px);
+  transition: 250ms ease-out;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+  flex-direction: column;
+}
+
+.more h2 {
+  font-family: var(--primary-text);
+  padding: 1rem;
+  font-size: 24px;
+  font-family: 700;
+}
+
+.more p:hover {
+  transition: 0.3s ease-in;
+  color: var(--dark-neon);
+}
+
+/* .sneaks {
+    color: var(--dark-neon);
+    transition: 0.3s ease-in;
+}
+
+.sneaks:hover {
+  text-decoration: underline;
+  transition: 0.3s ease-in;
+} */
+
+
+.sneaks{
+    display: inline-block;
+    padding-bottom: 0.1rem; /* defines the space between text and underline */
+    position: relative;
+    color: var(--dark-neon);
+    transition: 0.3s ease-in;
+  }
+  
+  .sneaks::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--dark-neon);
+    transition: width 0.25s ease-out;
+  }
+  .sneaks:hover::before {
+    width: 100%;
+  }
