@@ -9,6 +9,8 @@
     padding: 1rem;
     color: var(--dark-theme);
     background-color: var(--dark-neon);
+    border-radius: 2px;
+
 }
 
 
