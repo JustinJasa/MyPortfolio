@@ -126,7 +126,7 @@ export default function Navbar() {
         </ul>
         <ul className={css.item}>
           <span>2.</span>
-          <Link href={"learnings"}> My Learnings </Link>
+          <Link href={"/learnings"}> My Learnings </Link>
         </ul>
         <ul className={css.item}>
           <span>3.</span>Resume
