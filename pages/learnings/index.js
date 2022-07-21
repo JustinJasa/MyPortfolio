@@ -16,6 +16,8 @@ function Learnings({posts}) {
     return imageUrlBuilder(client).image(source)
   }
 
+  
+
   return (
     <article>
       <div>

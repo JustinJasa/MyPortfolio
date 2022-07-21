@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'readTime',
+      title: 'readTime',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -40,7 +45,7 @@ export default {
     {
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime',
+      type: 'date',
     },
     {
       name: 'body',

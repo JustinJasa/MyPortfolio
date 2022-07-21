@@ -118,7 +118,7 @@ export default function Navbar() {
 
   return (
     <div className={`${css.navbar}`} id={theme}>
-      <h2>JJ.</h2>
+      <h2><Link href={"/"}>JJ.</Link></h2>
       {/* <img src={MenuIcon} alt="logo" /> */}
       <li className={css.options}>
         <ul className={css.item}>

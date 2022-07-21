@@ -1,26 +1,74 @@
 import React, { useEffect, useState } from "react";
-import imageUrlBuilder from '@sanity/image-url'
-import {PortableText} from '@portabletext/react'
-import client from '../../client'
+import imageUrlBuilder from "@sanity/image-url";
+import { PortableText } from "@portabletext/react";
+import client from "../../client";
+import css from "../../styles/article.module.css";
+import { useGlobalContext } from "../../contexts/context";
+import { format } from "date-fns";
 
+function Post({ post }) {
+  let author = post.authorImage.asset._ref;
+  let biography = post.bio[0].children[0].text;
+  let primaryImage = post.mainImage.asset._ref;
+  const { theme } = useGlobalContext();
 
+  let date = post.publishedAt.toString();
+  let formattedDate = format(new Date(date), "do LLLL yyyy");
+  let readTime = post.readTime;
 
-function Post({ title, body, image }) {
-  console.log(title, body, image);
-
-
-  function urlFor (source) {
-    return imageUrlBuilder(client).image(source)
+  function urlFor(source) {
+    return imageUrlBuilder(client).image(source);
   }
-  
+
+  // const myLoader = ({ src, width, quality }) => {
+  //   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+  // }
 
   return (
-    <div>
-      <div>
-        <h1>{title}</h1>
-        <img src={urlFor(image).width(200).url()} />
-        <div>
-          <PortableText value={body} />
+    <div className={css.container} id={theme}>
+      <div className={css.blog}>
+        <div className={css.authorContainer}>
+          <div className={css.authImageContainer}>
+            <img
+              className={css.authorImage}
+              src={urlFor(author).width().url()}
+            />
+          </div>
+          <div className={css.authorInfo}>
+            <span className={css.authorName}>{post.name}</span>
+            {/* <div className={css.authorBio}>
+            <p>{biography}</p>
+          </div> */}
+            <div className={css.blogInfo}>
+              <span className={css.postDate}>{formattedDate}</span>
+              <div className={css.seperator}>
+                <span>.</span>
+              </div>
+              <span>{readTime}</span>
+            </div>
+          </div>
+        </div>
+        <div className={css.blogContent}>
+          <h1 className={css.blogTitle}>{post.title}</h1>
+          <div className={css.categoriesContainer}>
+            {post.categories &&
+              post.categories.map((category) => {
+                return (
+                  <div>
+                    <span className={css.categories}>{category}</span>
+                  </div>
+                );
+              })}
+          </div>
+          {/* <div>{author._ref}</div> */}
+          {primaryImage && (
+            <div className={css.headerImage}>
+              <img src={urlFor(primaryImage).width(800).url()} />
+            </div>
+          )}
+          <div className={css.content}>
+            <PortableText value={post.body} />
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +85,17 @@ export const getServerSideProps = async (pageContext) => {
   }
 
   const query = encodeURIComponent(
-    `*[ _type == "post" && slug.current == "${pageSlug}" ]`
+    `*[ _type == "post" && slug.current == "${pageSlug}" ]{
+      title,
+      "name": author->name,
+      "categories": categories[]->title,
+      "authorImage": author->image,
+      body,
+      "bio": author->bio,
+      publishedAt,
+      mainImage,
+      readTime
+    }`
   );
   const url = `https://48839dfn.api.sanity.io/v1/data/query/production?query=${query}`;
 
@@ -51,9 +109,7 @@ export const getServerSideProps = async (pageContext) => {
   } else {
     return {
       props: {
-        body: post.body,
-        title: post.title,
-        image: post.mainImage,
+        post,
       },
     };
   }
