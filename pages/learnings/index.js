@@ -1,55 +1,57 @@
-import React from 'react'
-import { useRouter } from 'next/router'
-import groq from 'groq'
-import client from '../../client'
-import Link from 'next/link'
-import imageUrlBuilder from '@sanity/image-url'
+import React from "react";
+import { useRouter } from "next/router";
+import groq from "groq";
+import client from "../../client";
+import { useGlobalContext } from "../../contexts/context";
+import css from "../../styles/articles.module.css";
+import { PortableText } from "@portabletext/react";
+import { format } from "date-fns";
+import Article from "../../components/Articles/article";
 
-
-
-function Learnings({posts}) {
-
-  console.log(posts)
-  console.log(posts[0].mainImage.asset._ref)
-
-  function urlFor (source) {
-    return imageUrlBuilder(client).image(source)
-  }
+function Learnings({ posts }) {
+  console.log(posts);
+  const { theme } = useGlobalContext();
+  console.log(posts[0].publishedAt);
 
   
 
   return (
-    <article>
+    <div className={css.articlesContainer} id={theme}>
       <div>
-        <h1>Welcome to a blog!</h1>
-        {posts.length > 0 && posts.map(
-          ({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
-            slug && (
-              <li key={_id}>
-                <Link href="/learnings/[slug]" as={`/learnings/${slug.current}`}>
-                  <a>{title}</a>
-                </Link>{' '}
-                ({new Date(publishedAt).toDateString()})
-                <img src={urlFor(mainImage.asset._ref).width(200).url()} alt="image" />
-              </li>
-            )
-        )}
+        {posts.length > 0 &&
+          posts.map((post) => {
+            let postdate = post.publishedAt;
+            let formattedDate = format(new Date(postdate), "do LLLL yyyy");
+
+            return (
+              <Article post={post} date={formattedDate}/>
+            );
+          })}
       </div>
-    </article>
-  )
+    </div>
+  );
 }
 
 export async function getStaticProps() {
- 
-
   const posts = await client.fetch(groq`
-      *[_type == "post" && publishedAt < now()] | order(publishedAt desc)
-    `)
-    return {
-      props: {
-        posts
+      *[_type == "post" && publishedAt < now()] | order(publishedAt desc){
+      title,
+      "name": author->name,
+      "categories": categories[]->title,
+      "authorImage": author->image,
+      body,
+      publishedAt,
+      mainImage,
+      readTime,
+      slug, 
+      description
       }
-    }
+    `);
+  return {
+    props: {
+      posts,
+    },
+  };
 }
 
-export default Learnings
+export default Learnings;

@@ -60,10 +60,9 @@ function Post({ post }) {
                 );
               })}
           </div>
-          {/* <div>{author._ref}</div> */}
           {primaryImage && (
             <div className={css.headerImage}>
-              <img src={urlFor(primaryImage).width(800).url()} />
+              <img src={urlFor(primaryImage).width(700).url()} />
             </div>
           )}
           <div className={css.content}>
