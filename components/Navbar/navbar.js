@@ -122,7 +122,8 @@ export default function Navbar() {
       {/* <img src={MenuIcon} alt="logo" /> */}
       <li className={css.options}>
         <ul className={css.item}>
-          <span>1.</span>Projects
+          <span>1.</span>
+          <Link href={"/projects"}> Projects </Link>
         </ul>
         <ul className={css.item}>
           <span>2.</span>
