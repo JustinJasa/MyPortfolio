@@ -18,7 +18,6 @@
     transition: 0.5s;
     cursor: pointer;
     background-color: var(--alternative-neon);
-    color: var(--light-theme);
 }
 
 /* #dark .button > span:hover{
