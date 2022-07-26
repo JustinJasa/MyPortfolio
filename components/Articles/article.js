@@ -3,7 +3,7 @@ import css from '../../styles/articles.module.css'
 import imageUrlBuilder from "@sanity/image-url";
 import client from "../../client";
 import Link from "next/link";
-
+import Image from 'next/image'
 
 function urlFor(source) {
     return imageUrlBuilder(client).image(source);
@@ -14,10 +14,12 @@ function Article({post, date}) {
     <div className={css.article}>
       <div>
         <div className={css.authorDeets}>
-          <div>
-            <img
+          <div className={css.authorImage}>
+            <Image
               src={urlFor(post.authorImage.asset._ref).width().url()}
               className={css.authorImage}
+              width={40}
+              height={40}
             />
           </div>
           <span className={css.authorName}>{post.name}</span>
@@ -53,9 +55,11 @@ function Article({post, date}) {
         </div>
       </div>
       <div className={css.headerImage}>
-        <img
-          src={urlFor(post.mainImage.asset._ref).width(300).url()}
+        <Image
+          src={urlFor(post.mainImage.asset._ref).width().url()}
           alt="main-image"
+          className={css.articleImage}
+          layout="fill"
         />
       </div>
     </div>

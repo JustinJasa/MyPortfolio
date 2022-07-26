@@ -33,6 +33,7 @@ body #light {
   --light-theme: #dee4e7;
   --dark-theme: #272727;
   --dark-neon: #00c6a9;
+  --lighter-dark: #414348;
   --light-neon: #b56200;
   --alternative-neon: #16dbff;
 }

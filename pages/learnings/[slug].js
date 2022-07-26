@@ -5,6 +5,7 @@ import client from "../../client";
 import css from "../../styles/article.module.css";
 import { useGlobalContext } from "../../contexts/context";
 import { format } from "date-fns";
+import Image from 'next/image'
 
 function Post({ post }) {
   let author = post.authorImage.asset._ref;
@@ -29,9 +30,11 @@ function Post({ post }) {
       <div className={css.blog}>
         <div className={css.authorContainer}>
           <div className={css.authImageContainer}>
-            <img
+            <Image
               className={css.authorImage}
               src={urlFor(author).width().url()}
+              width={60}
+              height={60}
             />
           </div>
           <div className={css.authorInfo}>
@@ -62,7 +65,7 @@ function Post({ post }) {
           </div>
           {primaryImage && (
             <div className={css.headerImage}>
-              <img src={urlFor(primaryImage).width(700).url()} />
+              <Image src={urlFor(primaryImage).width().url()} width={600} height={400} priority/>
             </div>
           )}
           <div className={css.content}>

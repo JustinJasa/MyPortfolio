@@ -1,0 +1,70 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCards {
+  width: 80%;
+  line-height: 2;
+  font-family: var(--primary-text);
+  /* padding-top: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.title h1 {
+  margin-bottom: 20px;
+  color: var(--dark-neon);
+}
+
+.title span{
+  margin-bottom: 50px;
+}
+
+.card {
+  /* padding: 30px; */
+  margin: 20px;
+  background-color: var(--lighter-dark);
+  border-radius: 10px;
+  transform: translateY(0px);
+  transition: 250ms ease-out;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+  box-shadow: 0 0 11px var(--dark-neon); 
+}
+
+.projectImage {
+  padding: 50px 75px;
+}
+
+
+.projectTitle{
+  padding: 20px;
+  color: var(--dark-theme);
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.domainName{
+  color: var(--dark-neon);
+  margin-top: -10px;
+}
+

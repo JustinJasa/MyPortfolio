@@ -118,7 +118,9 @@ export default function Navbar() {
 
   return (
     <div className={`${css.navbar}`} id={theme}>
-      <h2><Link href={"/"}>JJ.</Link></h2>
+      <h2>
+        <Link href={"/"}>JJ.</Link>
+      </h2>
       {/* <img src={MenuIcon} alt="logo" /> */}
       <li className={css.options}>
         <ul className={css.item}>
@@ -129,9 +131,11 @@ export default function Navbar() {
           <span>2.</span>
           <Link href={"/learnings"}> My Learnings </Link>
         </ul>
-        <ul className={css.item}>
-          <span>3.</span>Resume
-        </ul>
+        <a href="../../public/resume.pdf" download>
+          <ul className={css.item}>
+            <span>3.</span>Resume
+          </ul>
+        </a>
       </li>
       {theme == "dark" ? (
         <MoonIcon className={css.icon} onClick={toggleTheme} />

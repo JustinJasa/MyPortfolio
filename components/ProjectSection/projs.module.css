@@ -63,16 +63,24 @@
   font-family: var(--secondary-text);
 }
 
-.sneakerDon {
+.projTitle {
   font-size: 30px;
   padding: 0.5rem;
+  transition: 0.3s ease-in;
 }
+
+.projTitle:hover {
+  color: var(--dark-neon);
+  transition: 0.3s ease-in;
+}
+
 
 .description {
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
+  z-index: 10;
 }
 
 .description p {
@@ -101,13 +109,16 @@
 }
 
 .sneakerImage {
-  margin-right: -140px;
+  margin-right: -140px; 
+  width: 500px;
+  height: 350px;
+  position: relative;
 }
 
-.sneakerImage img {
+/* .sneakerImage{
   width: 400px;
   height: 400px;
-}
+} */
 
 .icon {
   margin-top: 10px;
