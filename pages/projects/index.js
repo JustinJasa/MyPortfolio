@@ -16,7 +16,7 @@ function Projects({ projects }) {
       <div className={css.projects}>
         <div className={css.title}>
           <h1>Projects</h1>
-          <span>projects i've work on in the past.</span>
+          <span>what i've work on in the past.</span>
         </div>
         <div className={css.projectCards}>
           {projects.length > 0 &&

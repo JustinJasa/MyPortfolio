@@ -33,7 +33,7 @@ export default function Hero() {
           exceptional digital experiences.
         </p>
         <div className={css.button}>
-          <Link href={"/projects"}><span>Check out my Work</span></Link>
+          <Link href={"/projects"}><span>CHECK OUT MY WORK</span></Link>
         </div>
       </div>
     </div>
