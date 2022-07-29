@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["assets.vercel.com", "cdn.sanity.io"],
+    domains: ["assets.vercel.com", "cdn.sanity.io", "raw.githubusercontent.com"],
     formats: ["image/avif", "image/webp"],
   },
 };

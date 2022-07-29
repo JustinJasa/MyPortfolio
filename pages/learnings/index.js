@@ -18,6 +18,10 @@ function Learnings({ posts }) {
   return (
     <div className={css.articlesContainer} id={theme}>
       <div>
+        <div className={css.title}>
+          <h1>My Learnings</h1>
+          <span>my journey in becoming a writer 🖋</span>
+        </div>
         {posts.length > 0 &&
           posts.map((post) => {
             let postdate = post.publishedAt;

@@ -1,0 +1,32 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+  line-height: 2;
+  font-family: var(--primary-text);
+  padding-top: 30px;
+}
+
+
+.technologies {
+  background-color: var(--dark-neon);
+  color: var(--dark-theme);
+  padding: 5px 10px;
+  border-radius: 2rem;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.technologiesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
