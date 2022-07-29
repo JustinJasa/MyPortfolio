@@ -5,7 +5,7 @@ import client from "../../client";
 import css from "../../styles/article.module.css";
 import { useGlobalContext } from "../../contexts/context";
 import { format } from "date-fns";
-import Image from 'next/image'
+import Image from "next/image";
 
 function Post({ post }) {
   let author = post.authorImage.asset._ref;
@@ -29,16 +29,7 @@ function Post({ post }) {
     <div className={css.container} id={theme}>
       <div className={css.blog}>
         <div className={css.authorContainer}>
-          <div className={css.authImageContainer}>
-            <Image
-              className={css.authorImage}
-              src={urlFor(author).width().url()}
-              width={60}
-              height={60}
-            />
-          </div>
           <div className={css.authorInfo}>
-            <span className={css.authorName}>{post.name}</span>
             {/* <div className={css.authorBio}>
             <p>{biography}</p>
           </div> */}
@@ -53,25 +44,33 @@ function Post({ post }) {
         </div>
         <div className={css.blogContent}>
           <h1 className={css.blogTitle}>{post.title}</h1>
-          <div className={css.categoriesContainer}>
-            {post.categories &&
-              post.categories.map((category) => {
-                return (
-                  <div>
-                    <span className={css.categories}>{category}</span>
-                  </div>
-                );
-              })}
-          </div>
           {primaryImage && (
             <div className={css.headerImage}>
-              <Image src={urlFor(primaryImage).width().url()} width={600} height={400} priority/>
+              <Image
+                src={urlFor(primaryImage).width().url()}
+                width={750}
+                height={400}
+                priority
+              />
             </div>
           )}
           <div className={css.content}>
             <PortableText value={post.body} />
           </div>
         </div>
+        {/* <div className={css.categoriesContainer}>
+          <div>
+            <span>Tags: </span>
+          </div>
+          {post.categories &&
+            post.categories.map((category) => {
+              return (
+                <div>
+                  <span className={css.categories}>{category}</span>
+                </div>
+              );
+            })}
+        </div> */}
       </div>
     </div>
   );

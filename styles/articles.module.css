@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -12,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 50%;
   margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -89,8 +88,8 @@
 }
 
 .desc{
-  width: 80%;
   text-align: justify;
+  line-height: 2;
 }
 
 .authorImage{
@@ -103,3 +102,19 @@
   width: 200px;
 }
 
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.title h1{
+  color: var(--dark-neon);
+  margin-bottom: 20px;
+}
+
+.title span{
+  margin-bottom: 50px;
+}

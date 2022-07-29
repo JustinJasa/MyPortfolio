@@ -22,10 +22,12 @@
 
 .authorContainer {
   display: flex;
+  border-bottom: 1px solid grey;
 }
 
 .blogTitle {
   color: var(--dark-neon);
+  margin-bottom: 30px;
 }
 
 .authorInfo {
