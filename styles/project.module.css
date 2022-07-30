@@ -30,3 +30,19 @@
   align-items: center;
   margin-bottom: 30px;
 }
+
+.headerImage{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+

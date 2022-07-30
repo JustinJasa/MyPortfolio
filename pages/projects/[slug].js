@@ -20,20 +20,26 @@ function Project({ project }) {
     types: {
       image: ({ value }) => {
         if (!value?.asset?._ref) {
-          return null
+          return null;
         }
         return (
-          <Image
-            alt={value.alt || ' '}
-            src={urlFor(value).width().height().fit('max').auto('format').url()}
-            width={320}
-            height={240}
-          />
-        )
-      }
-    }
-  }
-  
+          <div className={css.imageContainer}>
+            <Image
+              alt={value.alt || " "}
+              src={urlFor(value)
+                .width()
+                .height()
+                .fit("max")
+                .auto("format")
+                .url()}
+              width={600}
+              height={400}
+            />
+          </div>
+        );
+      },
+    },
+  };
 
   return (
     <div className={css.container} id={theme}>
@@ -41,17 +47,17 @@ function Project({ project }) {
         <div>
           <h1>{project.title}</h1>
           <div>
-            <span>Created: {project.publishedAt}</span>
+            <span>Worked on: {project.publishedAt}</span>
           </div>
           <div className={css.technologiesContainer}>
-            <span>Tools used:</span>
-            {project.technologies && project.technologies.map((technology) => {
-              return (
-                <div>
-                  <span className={css.technologies}>{technology}</span>
-                </div>
-              )
-            })}
+            {project.technologies &&
+              project.technologies.map((technology) => {
+                return (
+                  <div>
+                    <span className={css.technologies}>{technology}</span>
+                  </div>
+                );
+              })}
           </div>
           <div className={css.headerImage}>
             <Image
@@ -61,7 +67,7 @@ function Project({ project }) {
               priority
             />
           </div>
-          <PortableText value={project.body} components={ptComponents}/>
+          <PortableText value={project.body} components={ptComponents} />
         </div>
       </div>
     </div>
