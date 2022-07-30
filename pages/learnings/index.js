@@ -20,7 +20,7 @@ function Learnings({ posts }) {
       <div>
         <div className={css.title}>
           <h1>My Learnings</h1>
-          <span>my journey in becoming a writer 🖋</span>
+          <span>outletting my process 🖋</span>
         </div>
         {posts.length > 0 &&
           posts.map((post) => {

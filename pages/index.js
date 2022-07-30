@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <div className={styles.main} id={theme}>
       <Hero />
-      <Socials />
       <About/>
       <Skills />
       <Projs />

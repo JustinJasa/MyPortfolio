@@ -122,26 +122,24 @@ export default function Navbar() {
         <Link href={"/"}>JJ.</Link>
       </h2>
       {/* <img src={MenuIcon} alt="logo" /> */}
-      <li className={css.options}>
-        <ul className={css.item}>
-          <span>1.</span>
-          <Link href={"/projects"}> Projects </Link>
-        </ul>
-        <ul className={css.item}>
-          <span>2.</span>
-          <Link href={"/learnings"}> My Learnings </Link>
-        </ul>
-        <a href="../../public/resume.pdf" download>
+      <div className={css.container}>
+        <li className={css.options}>
           <ul className={css.item}>
-            <span>3.</span>Resume
+            <Link href={"/projects"}> Work </Link>
           </ul>
-        </a>
-      </li>
-      {theme == "dark" ? (
-        <MoonIcon className={css.icon} onClick={toggleTheme} />
-      ) : (
-        <SunIcon className={css.icon} onClick={toggleTheme} />
-      )}
+          <ul className={css.item}>
+            <Link href={"/learnings"}> Learnings </Link>
+          </ul>
+          <a href="resume.pdf" target="_blank">
+            <ul className={css.item}>Resume</ul>
+          </a>
+        </li>
+        {theme == "dark" ? (
+          <MoonIcon className={css.icon} onClick={toggleTheme} />
+        ) : (
+          <SunIcon className={css.icon} onClick={toggleTheme} />
+        )}
+      </div>
     </div>
   );
 }

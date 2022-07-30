@@ -24,6 +24,7 @@
 
 .about {
   font-size: 30px;
+  color: var(--dark-neon);
 }
 
 .desc {
