@@ -6,7 +6,7 @@ import Skills from "../components/skill";
 import Socials from "../components/SocialIcons/socials";
 import { useGlobalContext } from "../contexts/context";
 import About from "../components/AboutMe/aboutme";
-import Projs from '../components/ProjectSection/projs';
+import Projs from '../components/Work/work';
 import Contact from "../components/Contact/contact";
 
 export default function Home() {

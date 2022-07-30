@@ -12,7 +12,6 @@ export default function Contact() {
   return (
     <div className={css.container}>
       <div className={css.title}>
-        <span>4.</span>
         <h2 className={css.about}>Get in Touch</h2>
       </div>
       <div className={css.line}>
@@ -26,7 +25,7 @@ export default function Contact() {
         </p>
       </div>
       <div className={css.button} onClick={triggerEmail}>
-        <span>Contact Me</span>
+        <span>CONTACT ME</span>
         <MailIcon className={css.icon} />
       </div>
     </div>

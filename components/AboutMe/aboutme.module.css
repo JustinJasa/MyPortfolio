@@ -34,7 +34,7 @@
     width: 60%;
     margin: auto;
     padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-bottom: 16rem;
     display: flex;
     justify-content: center;
 }
@@ -44,6 +44,10 @@
     line-height: 1.6;
 }
 
+.description span{
+    color: var(--dark-neon);
+}
+
 .containerTwo{ 
     display: flex;
     justify-content: center;
@@ -51,7 +55,7 @@
 }
 
 .image{ 
-    border-radius: 2rem;
+    border-radius: 5px;
 }
 
 .line{
