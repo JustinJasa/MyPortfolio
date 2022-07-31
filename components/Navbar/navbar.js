@@ -44,10 +44,10 @@ export default function Navbar() {
                 }
               >
                 <nav className={css.mobileNav}>
-                  <Link href={"/projects"}>
+                  <Link href={"/projects"} passHref>
                     <ul className={css.item}>Work </ul>
                   </Link>
-                  <Link href={"/learnings"}>
+                  <Link href={"/learnings"} passHref>
                     <ul className={css.item}>Learnings </ul>
                   </Link>
                   <a href="resume.pdf" target="_blank">

@@ -65,6 +65,8 @@ function Project({ project }) {
               width={600}
               height={400}
               priority
+              alt="Primary Image"
+
             />
           </div>
           <PortableText value={project.body} components={ptComponents} />

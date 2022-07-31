@@ -15,7 +15,7 @@ function Work() {
         </span>
         <div>
           <button className={css.button}>
-            <Link href="/projects">
+            <Link href="/projects" passHref>
             <span>See my work</span>
             </Link>
             
@@ -28,7 +28,7 @@ function Work() {
           About my process in dev, learning and life{" "}
         </span>
         <div>
-          <button className={css.button}>
+          <button className={css.button} passHref>
             <Link href="/learnings">
             <span>Read my Articles</span>
             </Link>
