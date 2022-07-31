@@ -34,6 +34,7 @@ function About() {
           src={Justin}
           width={500}
           height={500}
+          alt="About me"
         />
       </div>
     </div>

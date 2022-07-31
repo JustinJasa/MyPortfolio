@@ -51,6 +51,7 @@ function Post({ post }) {
                 width={750}
                 height={400}
                 priority
+                alt="Primary Image"
               />
             </div>
           )}
