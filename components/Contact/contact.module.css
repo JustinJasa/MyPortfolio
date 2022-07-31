@@ -73,3 +73,13 @@
   margin-left: 10px;
   color: var(--dark-theme);
 }
+
+@media (max-width: 40em){
+  .container{
+    width: 80%;
+  }
+
+  .desc{
+    width: 80%;
+  }
+}

@@ -55,7 +55,7 @@
 
 
 .justin{
-    font-size: 68px;
+    font-size: 3.75rem;
     padding: 1rem 0rem;
 }
 
@@ -70,3 +70,20 @@
     padding-bottom: 1rem;
 }
 
+@media (max-width: 40em){
+    .tag{ 
+        font-size: 32px;
+    }
+
+    .justin{
+        font-size: 32px;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .desc{
+        width: 80%;
+    }
+}

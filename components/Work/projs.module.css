@@ -54,3 +54,30 @@
   transition: 0.2 ease-in;
   color: white;
 }
+
+@media (max-width: 40em){
+  .container{
+    flex-direction: column;
+  }
+
+  
+  .build{
+    border-bottom: 1px solid var(--dark-neon);
+    border-right: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .build h1{ 
+    font-size: 30px;
+  }
+
+  .build span{ 
+    font-size: 16px;
+  }
+  
+
+  .build:last-child{
+    border-bottom: none;
+  }
+}

@@ -29,6 +29,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .headerImage{ 
@@ -46,3 +47,8 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 40em){
+  .project{
+    width: 80%;
+  }
+}

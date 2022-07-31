@@ -118,3 +118,10 @@
 .title span{
   margin-bottom: 50px;
 }
+
+
+@media (max-width: 40em){
+  .article{
+    width: 80%;
+  }
+}

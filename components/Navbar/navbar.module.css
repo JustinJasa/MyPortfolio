@@ -66,3 +66,39 @@
   justify-content: center;
   align-items: center;
 }
+
+.hamburger{
+  display: none;
+}
+
+
+
+
+@media (max-width: 40em){
+  .container{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .display{
+    top: 0;
+    left: 0; 
+    background-color: var(--dark-theme);
+  }
+
+  .cross{
+    margin-right: 20px;
+  }
+
+  .item {
+    font-size: 24px;
+  }
+
+  .mobileNav{
+    margin-top: 100px;
+  }
+  
+}
