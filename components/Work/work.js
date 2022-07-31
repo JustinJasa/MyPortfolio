@@ -29,7 +29,7 @@ function Work() {
         </span>
         <div>
           <button className={css.button} passHref>
-            <Link href="/learnings">
+            <Link href="/learnings" passHref>
             <span>Read my Articles</span>
             </Link>
             

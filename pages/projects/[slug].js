@@ -51,10 +51,10 @@ function Project({ project }) {
           </div>
           <div className={css.technologiesContainer}>
             {project.technologies &&
-              project.technologies.map((technology) => {
+              project.technologies.map((technology, key) => {
                 return (
                   <div>
-                    <span className={css.technologies}>{technology}</span>
+                    <span className={css.technologies} key={key}>{technology}</span>
                   </div>
                 );
               })}

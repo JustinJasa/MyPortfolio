@@ -15,13 +15,13 @@ function About() {
           <p>
             Hey 👋 <br/>
             <br />
-            I'm Justin, a software engineering student at UTS with a strong
+            I&apos;m Justin, a software engineering student at UTS with a strong
             interest in developing applications that create amazing experiences
             for its users. <br /><br/>
-            Currently, I’m mainly honing skills as a frond-end developer but in
+            Currently, I&apos;m mainly honing skills as a frond-end developer but in
             the future I wash to develop into an individual who can help in all
             parts of the engineering process. <br /><br/>
-            Usually when I’m not working, I like being active 🏀, hanging out
+            Usually when I&apos;m not working, I like being active 🏀, hanging out
             with friends and enjoy big buckets of fried chicken 🍗 <br /><br/>
             Here are some technologies I have worked with: <span>JavaScript,</span> <span>React.js,</span>
             <span> Next.js,</span><span> express.js,</span><span> Sanity.io,</span><span> CSS/Tailwind,</span><span> HTML</span>

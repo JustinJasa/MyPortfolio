@@ -17,6 +17,7 @@ function ProjectCard({ project }) {
           width={200}
           height={150}
           priority
+          alt="Project Image"
         />
       </div>
       <div className={css.projectDetail}>

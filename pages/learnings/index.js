@@ -23,12 +23,12 @@ function Learnings({ posts }) {
           <span>outletting my process 🖋</span>
         </div>
         {posts.length > 0 &&
-          posts.map((post) => {
+          posts.map((post, key) => {
             let postdate = post.publishedAt;
             let formattedDate = format(new Date(postdate), "do LLLL yyyy");
 
             return (
-              <Article post={post} date={formattedDate}/>
+              <Article post={post} date={formattedDate} key={key}/>
             );
           })}
       </div>
