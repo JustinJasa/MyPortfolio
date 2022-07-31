@@ -53,8 +53,8 @@ function Project({ project }) {
             {project.technologies &&
               project.technologies.map((technology, key) => {
                 return (
-                  <div>
-                    <span className={css.technologies} key={key}>{technology}</span>
+                  <div key={key}>
+                    <span className={css.technologies}> {technology}</span>
                   </div>
                 );
               })}
@@ -66,7 +66,6 @@ function Project({ project }) {
               height={400}
               priority
               alt="Primary Image"
-
             />
           </div>
           <PortableText value={project.body} components={ptComponents} />
@@ -95,7 +94,7 @@ export const getServerSideProps = async (pageContext) => {
       publishedAt
     }`
   );
-  const sanityID = process.env.SANITY_ID
+  const sanityID = process.env.SANITY_ID;
   const url = `https://${sanityID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());
