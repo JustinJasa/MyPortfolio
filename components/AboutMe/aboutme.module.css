@@ -67,3 +67,14 @@
     opacity: 0.2;
     margin-bottom: 0.8rem;
 }
+
+@media (max-width: 40em){
+    .container{
+        width: 80%;
+        flex-direction: column;
+    }
+    .about{
+        font-size: 20px;
+        white-space: nowrap;
+    }
+}

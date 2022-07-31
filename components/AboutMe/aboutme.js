@@ -9,7 +9,7 @@ function About() {
       <div className={css.containerOne}>
         <div className={css.title}>
           <span className={css.about}>About Me </span>
-          <span className={css.line}>_______________________</span>
+          <span className={css.line}>________________</span>
         </div>
         <div className={css.description}>
           <p>
