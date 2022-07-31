@@ -98,7 +98,8 @@ export const getServerSideProps = async (pageContext) => {
       readTime
     }`
   );
-  const url = `https://48839dfn.api.sanity.io/v1/data/query/production?query=${query}`;
+  const sanityID = process.env.SANITY_ID
+  const url = `https://${sanityID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];
