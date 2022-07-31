@@ -22,8 +22,8 @@ function Projects({ projects }) {
           {projects.length > 0 &&
             projects.map((project, key) => {
               return (
-                <a href={`/projects/${encodeURIComponent(project.slug.current)}`}>
-                  <ProjectCard project={project} key={key}/>
+                <a href={`/projects/${encodeURIComponent(project.slug.current)}`} key={key}>
+                  <ProjectCard project={project} />
                 </a>
               );
             })}
