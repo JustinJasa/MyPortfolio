@@ -16,13 +16,13 @@ function Projects({ projects }) {
       <div className={css.projects}>
         <div className={css.title}>
           <h1>Work</h1>
-          <span>things i've worked on in the past.</span>
+          <span>things i&apos;ve worked on in the past.</span>
         </div>
         <div className={css.projectCards}>
           {projects.length > 0 &&
-            projects.map((project) => {
+            projects.map((project, key) => {
               return (
-                <a href={`/projects/${encodeURIComponent(project.slug.current)}`}>
+                <a href={`/projects/${encodeURIComponent(project.slug.current)}`} key={key}>
                   <ProjectCard project={project} />
                 </a>
               );
