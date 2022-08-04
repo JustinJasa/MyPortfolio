@@ -27,10 +27,6 @@ function Project({ project }) {
             <Image
               alt={value.alt || " "}
               src={urlFor(value)
-                .width()
-                .height()
-                .fit("max")
-                .auto("format")
                 .url()}
               width={600}
               height={400}

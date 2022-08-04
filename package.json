@@ -22,6 +22,7 @@
     "react-burger-menu": "^3.0.8",
     "react-dom": "17.0.2",
     "react-social-icons": "^5.14.0",
+    "sharp": "^0.30.7",
     "sudo": "^1.0.3",
     "typewriter-effect": "^2.18.2"
   },
