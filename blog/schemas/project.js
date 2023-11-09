@@ -26,9 +26,6 @@ export default {
       name: "mainImage",
       title: "Main image",
       type: "image",
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: "publishedAt",
@@ -46,6 +43,7 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+  
     {
       name: "description",
       title: "description",

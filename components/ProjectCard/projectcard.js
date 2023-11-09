@@ -9,6 +9,8 @@ function ProjectCard({ project }) {
   function urlFor(source) {
     return imageUrlBuilder(client).image(source);
   }
+
+  console.log(project);
   return (
     <div className={css.card}>
       <div className={css.projectImage}>
@@ -23,7 +25,7 @@ function ProjectCard({ project }) {
       <div className={css.projectDetail}>
         <li className={css.projectTitle}>
           <h4>{project.title}</h4>
-          <span className={css.domainName}>{project.domain}</span>
+          <span className={css.domainName}>Full Stack Application</span>
         </li>
       </div>
     </div>
