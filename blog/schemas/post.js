@@ -56,7 +56,7 @@ export default {
       name:"description",
       title:'description',
       type: 'text'
-    }
+    },
   ],
 
   preview: {

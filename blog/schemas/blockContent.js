@@ -49,6 +49,11 @@ export default {
                 name: 'href',
                 type: 'url',
               },
+              {
+                name: 'color',
+                title: 'Color',
+                type: 'color',
+              }
             ],
           },
         ],
@@ -61,5 +66,10 @@ export default {
       type: 'image',
       options: {hotspot: true},
     },
+    {
+      type: 'code', 
+      title: "Code Example"
+    },
+
   ],
 }
