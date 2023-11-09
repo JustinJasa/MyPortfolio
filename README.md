@@ -11,3 +11,5 @@ My development process began with the design phase, where I focused on creating 
 With Next.js at the core, I was able to integrate Sanity.io seamlessly. I used Sanity's powerful querying language, GROQ, to fetch content, ensuring that the data displayed is always up-to-date and reflective of my latest work. I also took advantage of Next.js’s API routes to handle form submissions, like contact requests, directly on my server instance without requiring an external server.
 
 The styling of the portfolio was accomplished with a combination of CSS Modules and Styled Components, which allowed for modular and reusable style snippets, keeping the codebase clean and maintainable.
+
+<img width="1496" alt="Screenshot 2023-11-09 at 6 05 25 pm" src="https://github.com/JustinJasa/MyPortfolio/assets/67536354/5e733cbf-4c94-4084-a897-fdf72354026f">
