@@ -3,7 +3,7 @@ import css from "./footer.module.css";
 import { useGlobalContext } from "../../contexts/context";
 import Socials from "../SocialIcons/socials";
 
-function footer() {
+function Footer() {
   const { toggleTheme, theme } = useGlobalContext();
 
   return (
@@ -18,4 +18,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;
