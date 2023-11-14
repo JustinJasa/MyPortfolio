@@ -35,9 +35,9 @@ function Article({ post, date }) {
         </div>
         <div className={css.categories}>
           {post.categories &&
-            post.categories.map((category) => {
+            post.categories.map((category, key) => {
               return (
-                <div>
+                <div key={key}>
                   <span>{category}</span>
                 </div>
               );
