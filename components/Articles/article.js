@@ -29,11 +29,11 @@ function Article({ post, date }) {
           </h2>
         </div>
         <div className={css.desc}>
-          {post.description.length > 250
+          {/* {post.description.length > 250
             ? `${post.description.substring(0, 250)}...`
-            : post.description}
+            : post.description} */}
         </div>
-        {/* <div className={css.categories}>
+        <div className={css.categories}>
           {post.categories &&
             post.categories.map((category) => {
               return (
@@ -42,7 +42,7 @@ function Article({ post, date }) {
                 </div>
               );
             })}
-        </div> */}
+        </div>
       </div>
     </div>
   );

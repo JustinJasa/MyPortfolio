@@ -1,6 +1,6 @@
 .blog {
   text-align: justify;
-  width: 50%;
+  width: 70%;
   margin: auto;
   line-height: 2;
   font-family: var(--primary-text);
@@ -23,6 +23,7 @@
 .authorContainer {
   display: flex;
   border-bottom: 1px solid grey;
+  align-items: center;
 }
 
 .blogTitle {

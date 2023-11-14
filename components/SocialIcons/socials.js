@@ -1,22 +1,24 @@
-import { CssSyntaxError } from 'postcss';
-import React from 'react'
-import { SocialIcon } from 'react-social-icons';
-import css from './socials.module.css'
+import { CssSyntaxError } from "postcss";
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import css from "./socials.module.css";
 import { useGlobalContext } from "../../contexts/context";
-
+import { LinkIcon } from "@heroicons/react/solid";
 
 function Socials() {
-
   const { toggleTheme, theme } = useGlobalContext();
 
   return (
-    <div className={css.container} id={theme}>
-        <SocialIcon network="instagram" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
-        <SocialIcon network="github" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon} bgColor="#FFFFFF"/>
-        <SocialIcon network="twitter" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
-        <SocialIcon network="linkedin" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/justin-jasa-08ba5a181/" className={css.icon}/>
+    <div className={css.container}>
+      <a
+        href="https://bento.me/justinjasa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkIcon className={css.icon} />
+      </a>
     </div>
-  )
+  );
 }
 
-export default Socials
+export default Socials;
