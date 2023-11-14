@@ -3,6 +3,12 @@
   margin-bottom: 10px;
   transform: translateY(0px);
   transition: 250ms ease-out;
+  color: white;  
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--dark-neon);
+  padding: 10px;
 }
 
 .icon:hover {

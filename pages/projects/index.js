@@ -9,15 +9,12 @@ import Link from "next/link";
 function Projects({ projects }) {
   const { theme } = useGlobalContext();
 
-  console.log(projects)
-
-  console.log(projects[0].slug.current);
 
   return (
     <div className={css.container} id={theme}>
       <div className={css.projects}>
         <div className={css.title}>
-          <h1>Work</h1>
+          <h1>Projects</h1>
           <span>things i&apos;ve worked on in the past.</span>
         </div>
         <div className={css.projectCards}>

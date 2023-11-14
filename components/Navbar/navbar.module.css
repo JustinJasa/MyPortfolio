@@ -71,7 +71,17 @@
   display: none;
 }
 
+.navItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.navIcon{
+  width: 25px;
+  height: 20px;
+  margin-right: 5px;
+}
 
 
 @media (max-width: 40em){
@@ -99,6 +109,17 @@
 
   .mobileNav{
     margin-top: 100px;
+  }
+
+  .navIcon{
+    width: 25px;
+    height: 20px;
+  }
+
+  .mobileNavLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
 }

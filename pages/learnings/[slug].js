@@ -41,6 +41,7 @@ function Post({ post }) {
               <span>{readTime}</span>
             </div>
           </div>
+
         </div>
         <div className={css.blogContent}>
           <h1 className={css.blogTitle}>{post.title}</h1>
@@ -59,19 +60,6 @@ function Post({ post }) {
             <PortableText value={post.body} />
           </div>
         </div>
-        {/* <div className={css.categoriesContainer}>
-          <div>
-            <span>Tags: </span>
-          </div>
-          {post.categories &&
-            post.categories.map((category) => {
-              return (
-                <div>
-                  <span className={css.categories}>{category}</span>
-                </div>
-              );
-            })}
-        </div> */}
       </div>
     </div>
   );
@@ -99,7 +87,7 @@ export const getServerSideProps = async (pageContext) => {
       readTime
     }`
   );
-  const sanityID = process.env.SANITY_ID
+  const sanityID = process.env.SANITY_ID;
   const url = `https://${sanityID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());

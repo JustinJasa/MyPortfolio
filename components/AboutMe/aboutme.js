@@ -19,7 +19,7 @@ function About() {
             interest in developing applications that create amazing experiences
             for its users. <br /><br/>
             Currently, I&apos;m mainly honing skills as a frond-end developer but in
-            the future I wash to develop into an individual who can help in all
+            the future I wish to develop into an individual who can help in all
             parts of the engineering process. <br /><br/>
             Usually when I&apos;m not working, I like being active 🏀, hanging out
             with friends and enjoy big buckets of fried chicken 🍗 <br /><br/>
