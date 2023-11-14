@@ -4,7 +4,6 @@ import Socials from "./SocialIcons/socials";
 import Footer from './Footer/footer';
 
 
-
 export default function Layout({ children }) {
   
 
@@ -12,7 +11,6 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       <main>{children}</main>
-      {/* <Socials /> */}
       <Footer/>
     </>
   );

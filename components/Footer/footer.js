@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./footer.module.css";
-import { useGlobalContext } from "../../contexts/context";
 import Socials from "../SocialIcons/socials";
+import { useGlobalContext } from "../../contexts/context"
 
 function Footer() {
   const { toggleTheme, theme } = useGlobalContext();
